@@ -1,3 +1,5 @@
-import streamlit
+import streamlit as st
 
-streamlit.title("Zena's Amazing Athleisure Catalog")
+st.title("Zena's Amazing Athleisure Catalog")
+
+st.selectbox('Pick a sweatsuit color or style:', ('Orange', 'Burgandy'))
