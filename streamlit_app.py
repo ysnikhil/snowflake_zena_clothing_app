@@ -2,4 +2,6 @@ import streamlit as st
 
 st.title("Zena's Amazing Athleisure Catalog")
 
-st.selectbox('Pick a sweatsuit color or style:', ('Orange', 'Burgandy'))
+selection=st.selectbox('Pick a sweatsuit color or style:', ('Orange', 'Burgandy'))
+
+st.write('You have selected: ',selection)
