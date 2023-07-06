@@ -25,7 +25,7 @@ selection=st.selectbox('Pick a sweatsuit color or style:', df['color_or_style'].
 st.write("You selected: ", selection)
 
 product_caption='Our Warm, Comfortable, '+ selection+ ' SweatSuit!'
-st.image(df['direct_url'], width=400, caption=product_caption)
+st.image(df[df['direct_url']==selection], width=400, caption=product_caption)
 
 
 
