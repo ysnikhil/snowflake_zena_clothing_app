@@ -21,6 +21,6 @@ list_of_colors=my_cur.fetchall()
 df=pd.DataFrame(list_of_colors)
 #st.write("My List of colors: ", df)
 
-selection=st.selectbox('Pick a sweatsuit color or style:', df['0'].tolist())
+selection=st.selectbox('Pick a sweatsuit color or style:', df[0].tolist())
 
 #st.text("You selected: ", selection)
