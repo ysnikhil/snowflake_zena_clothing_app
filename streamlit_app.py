@@ -8,7 +8,7 @@ selection=st.selectbox('Pick a sweatsuit color or style:', ('Orange', 'Burgandy'
 st.write('You have selected: ',selection)
 
 
-my_cnx=snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_cnx=snowflake.connector.connect(**st.secrets["snowflake"])
 my_cur=my_cnx.cursor()
 
 my_cur.execute("SELECT CURRENT_USER(), CURRENT_REGION(), CURRENT_ACCOUNT()")
