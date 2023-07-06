@@ -16,7 +16,7 @@ my_cur=my_cnx.cursor()
 my_cur.execute("select color_or_style from catalog_for_website")
 list_of_colors=my_cur.fetchall()
 
-st.text("My List of colors: ", list_of_colors)
+st.write("My List of colors: ", list_of_colors)
 #selection=st.selectbox('Pick a sweatsuit color or style:', tolist(list_of_colors))
 
 #st.text("You selected: ", selection)
