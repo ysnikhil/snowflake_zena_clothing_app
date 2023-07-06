@@ -14,13 +14,17 @@ my_cur=my_cnx.cursor()
 #st.text("Hello From Snowflake")
 #st.text(my_data_row)
 
-my_cur.execute("select color_or_style from catalog_for_website")
+my_cur.execute("select * from catalog_for_website")
 list_of_colors=my_cur.fetchall()
 
 #converting the query result, which is like a json to a dataframe for easier accessebility 
 df=pd.DataFrame(list_of_colors)
-#st.write("My List of colors: ", df)
+st.write("My List of colors: ", df)
 
-selection=st.selectbox('Pick a sweatsuit color or style:', df[0].tolist())
+#selection=st.selectbox('Pick a sweatsuit color or style:', df[0].tolist())
 
-st.write("You selected: ", selection)
+#st.write("You selected: ", selection)
+
+
+
+
