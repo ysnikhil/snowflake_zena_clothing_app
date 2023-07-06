@@ -3,17 +3,20 @@ import snowflake.connector
 
 st.title("Zena's Amazing Athleisure Catalog")
 
-selection=st.selectbox('Pick a sweatsuit color or style:', ('Orange', 'Burgandy'))
 
-st.write('You have selected: ',selection)
-
-
+# Connecting to Snowflake
 my_cnx=snowflake.connector.connect(**st.secrets["snowflake"])
 my_cur=my_cnx.cursor()
 
-my_cur.execute("SELECT CURRENT_USER(), CURRENT_REGION(), CURRENT_ACCOUNT()")
+#my_cur.execute("SELECT CURRENT_USER(), CURRENT_REGION(), CURRENT_ACCOUNT()")
+#my_data_row=my_cur.fetchone()
+#st.text("Hello From Snowflake")
+#st.text(my_data_row)
 
-my_data_row=my_cur.fetchone()
+my_cur.execute("select color_or_style from catalog_for_website")
+list_of_colors=my_cur.fetchall()
 
-st.text("Hello From Snowflake")
-st.text(my_data_row)
+st.text("My List of colors: ", list_of_colors)
+#selection=st.selectbox('Pick a sweatsuit color or style:', tolist(list_of_colors))
+
+#st.text("You selected: ", selection)
