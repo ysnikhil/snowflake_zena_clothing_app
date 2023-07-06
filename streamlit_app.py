@@ -18,7 +18,7 @@ my_cur.execute("select color_or_style from catalog_for_website")
 list_of_colors=my_cur.fetchall()
 
 #converting the query result, which is like a json to a dataframe for easier accessebility 
-df=st.Dataframe(list_of_colors)
+df=st.dataframe(list_of_colors)
 st.write("My List of colors: ", df)
 #selection=st.selectbox('Pick a sweatsuit color or style:', tolist(list_of_colors))
 
