@@ -1,5 +1,6 @@
 import streamlit as st
 import snowflake.connector
+import pandas as pd
 
 st.title("Zena's Amazing Athleisure Catalog")
 
@@ -16,7 +17,9 @@ my_cur=my_cnx.cursor()
 my_cur.execute("select color_or_style from catalog_for_website")
 list_of_colors=my_cur.fetchall()
 
-st.write("My List of colors: ", list_of_colors)
+#converting the query result, which is like a json to a dataframe for easier accessebility 
+df=st.Dataframe(list_of_colors)
+st.write("My List of colors: ", df)
 #selection=st.selectbox('Pick a sweatsuit color or style:', tolist(list_of_colors))
 
 #st.text("You selected: ", selection)
