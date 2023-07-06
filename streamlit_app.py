@@ -19,7 +19,8 @@ list_of_colors=my_cur.fetchall()
 
 #converting the query result, which is like a json to a dataframe for easier accessebility 
 df=pd.DataFrame(list_of_colors)
-st.write("My List of colors: ", df)
-#selection=st.selectbox('Pick a sweatsuit color or style:', tolist(list_of_colors))
+#st.write("My List of colors: ", df)
+
+selection=st.selectbox('Pick a sweatsuit color or style:', df['0'].tolist())
 
 #st.text("You selected: ", selection)
