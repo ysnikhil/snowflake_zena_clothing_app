@@ -24,6 +24,8 @@ df=pd.DataFrame(list_of_colors,columns=['color_or_style','price','direct_url','s
 selection=st.selectbox('Pick a sweatsuit color or style:', df['color_or_style'].tolist())
 st.write("You selected: ", selection)
 
+product_caption='Our Warm, Comfortable, '+ selection+ ' SweatSuit!'
+st.image(df['direct_url'], width=400, caption=product_caption)
 
 
 
