@@ -23,4 +23,4 @@ df=pd.DataFrame(list_of_colors)
 
 selection=st.selectbox('Pick a sweatsuit color or style:', df[0].tolist())
 
-#st.text("You selected: ", selection)
+st.write("You selected: ", selection)
