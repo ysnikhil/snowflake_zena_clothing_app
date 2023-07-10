@@ -26,6 +26,7 @@ st.write("You selected: ", selection)
 
 product_caption='Our Warm, Comfortable, '+ selection+ ' SweatSuit!'
 st.write(df[df['direct_url']==selection])
+st.write(df['direct_url'])
 #st.image(df[df['direct_url']==selection], width=400, caption=product_caption)
 
 
