@@ -28,6 +28,7 @@ product_caption='Our Warm, Comfortable, '+ selection+ ' SweatSuit!'
 #st.write(df.loc[df['color_or_style']==selection,['direct_url']].squeeze())
 #st.write(df['direct_url'])
 st.image(df.loc[df['color_or_style']==selection,['direct_url']].squeeze(), width=400, caption=product_caption)
+st.write(df.loc[df['color_or_style']==selection,['price']].squeeze(), selection)
 st.write(df.loc[df['color_or_style']==selection,['size_list']].squeeze(), selection)
 st.write(df.loc[df['color_or_style']==selection,['upsell_product_desc']].squeeze(), selection)
 
